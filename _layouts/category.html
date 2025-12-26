@@ -12,13 +12,31 @@ layout: page
     <span class="lead text-muted ps-2">{{ page.posts | size }}</span>
   </h1>
 
-  <ul class="content ps-0">
-    {% for post in page.posts %}
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="dash flex-grow-1"></span>
-        {% include datetime.html date=post.date class='text-muted small text-nowrap' lang=lang %}
-      </li>
-    {% endfor %}
-  </ul>
+  <div class="content">
+    <ul class="content ps-0">
+      {% for post in page.posts %}
+        {% if post.layout == 'publication' %}
+          <div class="card p-3 mb-3 d-flex align-items-center flex-row">
+            {% if post.image %}
+              <img src="{{ post.image | relative_url }}" alt="Publication Image" class="img-fluid me-3" style="width: 250px; height: 150px; object-fit: cover; border-radius: 0;">
+            {% else %}
+              <img src="{{ '/assets/img/result.png' | relative_url }}" alt="Publication Image" class="img-fluid me-3" style="width: 250px; height: 150px; object-fit: cover; border-radius: 0;">
+            {% endif %}
+            <div>
+              <h4>{{ post.title }}</h4>
+              <p class="text-muted mb-1">{{ post.authors }}</p>
+              <p class="text-muted mb-1">{{ post.venue }}</p>
+              <p class="text-muted">{% include datetime.html date=post.date lang=lang %}</p>
+            </div>
+          </div>
+        {% else %}
+          <li class="d-flex justify-content-between px-md-3">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="dash flex-grow-1"></span>
+            {% include datetime.html date=post.date class='text-muted small text-nowrap' lang=lang %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
 </div>

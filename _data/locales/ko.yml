@@ -22,6 +22,10 @@ search:
   cancel: Cancel
   no_results: Oops! No results found.
 
+panel:
+  lastmod: Recently Updated
+  toc: Contents
+
 copyright:
   # Shown at the bottom of the post
   license:

@@ -383,7 +383,6 @@
 * **tools:** avoid initialization interruption in single branch forks ([#992](https://github.com/cotes2020/jekyll-theme-chirpy/issues/992)) ([e90461a](https://github.com/cotes2020/jekyll-theme-chirpy/commit/e90461aa3c81633863db6a12c5924ddba33bd08e))
 * **ui:** improve categories color in dark mode ([414dd13](https://github.com/cotes2020/jekyll-theme-chirpy/commit/414dd132aed70f4bd96cb712d00eacc82d2753e9))
 * **ui:** improve hover effect for post preview cards ([7626e4d](https://github.com/cotes2020/jekyll-theme-chirpy/commit/7626e4d00544346a46b6e5ff2f3a99d234defe09))
-* **ui:** improve hover effect of trending tags ([34499f0](https://github.com/cotes2020/jekyll-theme-chirpy/commit/34499f0c927ce8fea3705dc2f0f0e6805cabda43))
 * **ui:** improve inline code in light mode ([e38309f](https://github.com/cotes2020/jekyll-theme-chirpy/commit/e38309f3bd1302ffe60b682136b6efaf96f4d9ae))
 * **ui:** improve related posts design ([2918da9](https://github.com/cotes2020/jekyll-theme-chirpy/commit/2918da9f29465618d557c082ff3a2f23d7519049))
 * **ui:** improve the color of prompts in dark mode ([8cbbcfa](https://github.com/cotes2020/jekyll-theme-chirpy/commit/8cbbcfa26da0addd88affada23a65770250f2404))

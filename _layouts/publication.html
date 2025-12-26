@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<!--
+  The Publication layout for displaying research papers.
+  This layout is designed to show paper title, authors, and conference/journal information.
+-->
+
+<article class="px-1">
+  <div class="container-lg">
+    <div class="row">
+      <div class="col-xl-2 col-lg-2 d-none d-lg-block"></div>
+      <div class="col-xl-8 col-lg-8 col-md-12 col-12">
+        <div class="publication-item">
+          <h2 class="publication-title">{{ page.title }}</h2>
+          <p class="publication-authors">{{ page.authors }}</p>
+          <p class="publication-venue">{{ page.venue }}</p>
+          {% if page.image %}
+            <img src="{{ page.image | relative_url }}" alt="Publication Image" class="img-fluid mb-3">
+          {% endif %}
+          {% if page.abstract %}
+            <h3>Abstract</h3>
+            <p>{{ page.abstract }}</p>
+          {% endif %}
+          {% if page.links %}
+            <div class="publication-links">
+              {% for link in page.links %}
+                <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary me-2">{{ link.name }}</a>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-xl-2 col-lg-2 d-none d-lg-block"></div>
+    </div>
+  </div>
+</article>

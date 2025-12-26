@@ -15,7 +15,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
   left: 0;
   height: 100%;
   overflow-y: auto;
-  width: v.$sidebar-width;
+  width: 300px; /* 사이드바 너비 늘리기 */
   background: var(--sidebar-bg);
   border-right: 1px solid var(--sidebar-border-color);
 
@@ -36,6 +36,9 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
 
     [#{$sidebar-display}] & {
       transform: translateX(0);
+      &:not(:first-child) {
+        margin-top: 0.25rem;
+      }
     }
   }
 
