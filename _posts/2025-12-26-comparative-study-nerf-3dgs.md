@@ -7,4 +7,4 @@ authors: "SungHyeon Woo, Jeongil Seo*"
 venue: "Journal of Broadcast Engineering 2025"
 image: "/assets/img/result.png"
 ---
-This paper presents a comparative study on the performance of NeRF and 3DGS based models.
+
