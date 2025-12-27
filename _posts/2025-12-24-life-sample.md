@@ -1,8 +1,6 @@
 ---
-title: 일상 이야기 샘플
+title: Life-sample
 date: 2025-12-24 16:35:00 +0900
 categories: [Life]
-tags: [일상]
+tags: [Life]
 ---
-
-이곳에는 일상생활에 대한 이야기가 들어갈 예정입니다.
