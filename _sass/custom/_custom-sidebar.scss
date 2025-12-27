@@ -119,24 +119,22 @@ hr.my-2 {
 
 /* Adjust spacing for home screen cards */
 .card.p-3.mb-4 {
-  padding: 1.25rem !important; /* Set padding to 0 */
-  margin-bottom: 1.25rem !important; /* Adjust margin-bottom */
+  padding: 1.25rem !important;  /* 카드 안 여백 넉넉하게 */
+  margin-bottom: 0.75rem !important; /* 카드들 사이 간격은 적당히 */
 }
 
 .card.p-3.mb-4 h4.mb-1 {
-  margin-bottom: 1rem !important; /* Set margin for h4 to 0 */
-  margin-top: 1rem !important; /* Ensure no top margin for h4 */
+  margin-bottom: 0.25rem !important; /* 제목은 살짝만 띄우고 */
+  margin-top: 0 !important;
 }
 
 .card.p-3.mb-4 p.text-muted {
-  margin-bottom: 0 !important; /* Set margin for p elements within the card to 0 */
-  margin-top: 0 !important; /* Ensure no top margin for p */
+  margin-bottom: 0.25rem !important; /* 설명 줄 간격도 조금만 */
+  margin-top: 0 !important;
 }
 
 .card.p-3.mb-4 ul.list-unstyled {
-  margin-bottom: 0 !important; /* Set margin for ul to 0 */
-  margin-top: 0 !important; /* Ensure no top margin for ul */
+  margin-bottom: 0.25rem !important;
+  margin-top: 0.25rem !important;
 }
-
-
 
