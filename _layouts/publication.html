@@ -15,6 +15,9 @@ layout: default
           <h2 class="publication-title">{{ page.title }}</h2>
           <p class="publication-authors">{{ page.authors }}</p>
           <p class="publication-venue">{{ page.venue }}</p>
+          {% if page.paper %}
+            <p class="publication-link"><a href="{{ page.paper }}" target="_blank" rel="noopener noreferrer">[Paper]</a></p>
+          {% endif %}
           {% if page.image %}
             <img src="{{ page.image | relative_url }}" alt="Publication Image" class="img-fluid mb-3">
           {% endif %}

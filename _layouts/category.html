@@ -45,9 +45,9 @@ layout: page
                   </h4>
                   <p class="text-muted mb-1">{{ post.authors }}</p>
                   <p class="text-muted mb-1">{{ post.venue }}</p>
-                  <p class="text-muted mb-0">
-                    {% include datetime.html date=post.date lang=lang %}
-                  </p>
+                  {% if post.paper %}
+                    <p class="text-muted mb-1"><a href="{{ post.paper }}" target="_blank" rel="noopener noreferrer">[Paper]</a></p>
+                  {% endif %}
                 </div>
               </div>
             </div>
