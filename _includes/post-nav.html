@@ -4,13 +4,38 @@
   {% assign previous = site.data.locales[include.lang].post.button.previous %}
   {% assign next = site.data.locales[include.lang].post.button.next %}
 
-  {% if page.previous.url %}
+  {% assign current_post_index = 0 %}
+  {% for post in site.posts %}
+    {% if post.url == page.url %}
+      {% assign current_post_index = forloop.index0 %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign found_previous = null %}
+  {% for i in (0..current_post_index) reversed %}
+    {% assign post = site.posts[i] %}
+    {% if post.url != page.url and post.nav_exclude != true %}
+      {% assign found_previous = post %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign found_next = null %}
+  {% for i in (current_post_index..site.posts.size) %}
+    {% assign post = site.posts[i] %}
+    {% if post.url != page.url and post.nav_exclude != true %}
+      {% assign found_next = post %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% if found_previous %}
     <a
-      href="{{ site.baseurl }}{{ page.previous.url }}"
+      href="{{ site.baseurl }}{{ found_previous.url }}"
       class="btn btn-outline-primary"
       aria-label="{{ previous }}"
     >
-      <p>{{ page.previous.title }}</p>
+      <p>{{ found_previous.title }}</p>
     </a>
   {% else %}
     <div class="btn btn-outline-primary disabled" aria-label="{{ previous }}">
@@ -18,13 +43,13 @@
     </div>
   {% endif %}
 
-  {% if page.next.url %}
+  {% if found_next %}
     <a
-      href="{{ site.baseurl }}{{page.next.url}}"
+      href="{{ site.baseurl }}{{ found_next.url }}"
       class="btn btn-outline-primary"
       aria-label="{{ next }}"
     >
-      <p>{{ page.next.title }}</p>
+      <p>{{ found_next.title }}</p>
     </a>
   {% else %}
     <div class="btn btn-outline-primary disabled" aria-label="{{ next }}">
