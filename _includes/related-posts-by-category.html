@@ -1,0 +1,26 @@
+{% if page.categories.size > 0 %}
+  {% assign current_category = page.categories[0] %}
+  {% assign related_posts = site.posts | where_exp: "post", "post.categories contains current_category and post.url != page.url" | sample: 4 %}
+
+  {% if related_posts.size > 0 %}
+    <div class="related-posts mt-5">
+      <h4 class="mb-3">There are more posts waiting for you</h4>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for post in related_posts %}
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h5>
+                <p class="card-text text-muted">
+                  {% include datetime.html date=post.date tooltip=true lang=lang %}
+                </p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+{% endif %}
