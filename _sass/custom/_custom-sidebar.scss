@@ -176,3 +176,12 @@ hr.my-2 {
     font-size: 1.1rem;
   }
 }
+
+/* Award 카드 내부 위 여백 줄이기 */
+.award-item {
+  padding-top: 0.5rem !important; /* 기존 1.25rem에서 줄이는 느낌으로 */
+}
+
+.award-item .award-title {
+  margin-top: 0 !important; /* 제목 위 기본 마진 제거 */
+}
