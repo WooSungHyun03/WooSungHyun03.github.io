@@ -10,6 +10,9 @@
 }
 
 html {
+  /* Default to light mode if no system preference or data-mode is set */
+  @include light.styles;
+
   @media (prefers-color-scheme: light) {
     &:not([data-mode]),
     &[data-mode='light'] {
@@ -32,6 +35,15 @@ html {
     }
   }
 
+  /* Explicit data-mode overrides for cases where media queries might not be enough */
+  &[data-mode='light'] {
+    @include light.styles;
+  }
+
+  &[data-mode='dark'] {
+    @include dark.styles;
+  }
+
   @include bp.lg {
     overflow-y: scroll;
   }
@@ -44,6 +56,7 @@ body {
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   font-family: v.$font-family-base;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 h1.dynamic-title {

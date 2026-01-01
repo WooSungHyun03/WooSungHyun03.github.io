@@ -6,6 +6,7 @@
 #topbar-wrapper {
   height: v.$topbar-height;
   background-color: var(--topbar-bg);
+  transition: background-color 0.5s ease;
 
   @include bp.lt(bp.get(lg)) {
     @include mx.slide(top 0.2s ease);

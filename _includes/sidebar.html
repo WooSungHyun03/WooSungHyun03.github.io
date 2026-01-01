@@ -23,14 +23,14 @@
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
       <!-- home -->
-      <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
+      <li class="nav-item{% if page.url == '/' or page.url == '/index.html' %}{{ " active" }}{% endif %}">
         <a href="{{ '/' | relative_url }}" class="nav-link">
           <i class="fa-fw fas fa-home"></i>
           <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
         </a>
       </li>
       <!-- Custom Sidebar Categories -->
-      <li class="nav-item">
+      <li class="nav-item{% if page.url contains '/categories/notice/' %}{{ " active" }}{% endif %}">
         <a href="{{ '/categories/notice/' | relative_url }}" class="nav-link">
           <i class="fa-fw fas fa-bullhorn"></i>
           <span>NOTICE</span>
@@ -38,35 +38,35 @@
       </li>
 
 
-      <li class="nav-item">
+      <li class="nav-item{% if page.url contains '/categories/publications/' %}{{ " active" }}{% endif %}">
         <a href="{{ '/categories/publications/' | relative_url }}" class="nav-link">
           <i class="fa-fw fas fa-book"></i>
           <span>PUBLICATIONS</span>
         </a>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item{% if page.url contains '/categories/award/' %}{{ " active" }}{% endif %}">
         <a href="{{ '/categories/award/' | relative_url }}" class="nav-link">
           <i class="fa-fw fas fa-trophy"></i>
           <span>AWARD</span>
         </a>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item{% if page.url contains '/categories/paper-review/' %}{{ " active" }}{% endif %}">
         <a href="{{ '/categories/paper-review/' | relative_url }}" class="nav-link">
           <i class="fa-fw fas fa-file-alt"></i>
           <span>PAPER REVIEW</span>
         </a>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item{% if page.url contains '/categories/study/' %}{{ " active" }}{% endif %}">
         <a href="{{ '/categories/study/' | relative_url }}" class="nav-link">
           <i class="fa-fw fas fa-solid fa-book-open"></i>
           <span>STUDY</span>
         </a>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item{% if page.url contains '/categories/life/' %}{{ " active" }}{% endif %}">
         <a href="{{ '/categories/life/' | relative_url }}" class="nav-link">
           <i class="fa-fw fas fa-smile"></i>
           <span>LIFE</span>
@@ -119,16 +119,15 @@
         >
           <i class="{{ entry.icon }}"></i>
         </a>
-
-        {% if entry.type == 'email' %}
-          {% unless site.theme_mode %}
-            <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle" style="margin-left: 0.5rem;">
-              <i class="fas fa-sun"></i>
-            </button>
-          {% endunless %}
-        {% endif %}
       {% endif %}
     {% endfor %}
+
+    {% unless site.theme_mode %}
+      <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
+        <i class="fas fa-adjust dark"></i>
+        <i class="fas fa-adjust light"></i>
+      </button>
+    {% endunless %}
   </div>
   <!-- .sidebar-bottom -->
 

@@ -4,7 +4,8 @@ swcache: true
 ---
 
 [
-  {% for post in site.posts %}
+  {% assign filtered_posts = site.posts | where_exp: "post", "post.layout != 'publication' and post.layout != 'award'" %}
+  {% for post in filtered_posts %}
   {
     "title": {{ post.title | jsonify }},
     "url": {{ post.url | relative_url | jsonify }},

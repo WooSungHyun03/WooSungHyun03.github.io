@@ -9,10 +9,16 @@
 }
 
 .text-center.mb-4 {
-  background-color: #fff; /* Changed to white for CV look */
+  background-color: var(--card-bg);
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: none; /* Removed shadow for cleaner look */
+  color: var(--text-color);
+  border: 1px solid var(--main-border-color);
+}
+
+.text-center.mb-4 h1 {
+  color: var(--heading-color);
 }
 
 .text-center.mb-4 img {
@@ -23,13 +29,13 @@
 .site-title {
   font-size: 2.5rem; /* Larger font size for name */
   font-weight: bold;
-  color: #343a40;
+  color: var(--heading-color);
   margin-bottom: 0.5rem; /* Added margin */
 }
 
 .site-subtitle {
   font-size: 1.2rem; /* Adjusted font size */
-  color: #6c757d;
+  color: var(--text-muted-color);
   margin-top: 0; /* Removed top margin */
 }
 
@@ -38,12 +44,13 @@ h2 {
   font-weight: bold;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #343a40; /* Underline for sections */
+  border-bottom: 2px solid var(--main-border-color); /* Underline for sections */
   padding-bottom: 0.5rem;
+  color: var(--heading-color);
 }
 
 hr.my-2 {
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid var(--main-border-color);
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -51,29 +58,30 @@ hr.my-2 {
 .publication-item, .award-item, #page-category .card {
   margin-bottom: 0.75rem !important;
   padding: 1.25rem !important;
-  border: 1px solid #dee2e6 !important;
+  border: 1px solid var(--main-border-color) !important;
   border-radius: 0 !important;
-  background-color: #fff;
+  background-color: var(--card-bg);
   box-shadow: none !important;
   display: block !important;
+  color: var(--text-color);
 }
 
 .publication-item .publication-title, .award-item .award-title {
   font-size: 1.5rem;
-  color: #007bff;
+  color: var(--link-color);
   margin-bottom: 0.75rem;
   font-weight: 700;
 }
 
 .publication-item .publication-authors, .award-item .award-organization {
   font-size: 1.05rem;
-  color: #495057;
+  color: var(--text-color);
   margin-bottom: 0.35rem;
 }
 
 .publication-item .publication-venue, .award-item .award-date {
   font-size: 0.95rem;
-  color: #6c757d;
+  color: var(--text-muted-color);
   margin-bottom: 1.25rem;
 }
 
@@ -89,13 +97,13 @@ hr.my-2 {
   font-size: 1.25rem;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
-  color: #343a40;
+  color: var(--heading-color);
 }
 
 .publication-item p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #495057;
+  color: var(--text-color);
 }
 
 .publication-links .btn {
@@ -123,11 +131,16 @@ hr.my-2 {
 .card.p-3.mb-4 {
   padding: 1.25rem !important;  /* 카드 안 여백 넉넉하게 */
   margin-bottom: 0.75rem !important; /* 카드들 사이 간격은 적당히 */
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--main-border-color) !important;
+  box-shadow: none !important;
 }
 
 .card.p-3.mb-4 h4.mb-1 {
   margin-bottom: 0.25rem !important; /* 제목은 살짝만 띄우고 */
   margin-top: 0 !important;
+  color: var(--heading-color) !important;
 }
 
 .card.p-3.mb-4 p.text-muted {
@@ -153,7 +166,7 @@ hr.my-2 {
   width: 1.75rem;
   height: 1.75rem;
   margin-bottom: 0.5rem;
-  margin-left: 0.8rem !important; /* Space from email icon */
+  /* margin-left removed to ensure equal spacing with other icons which have margin-right */
 
   &:hover {
     color: var(--sidebar-active-color);
@@ -162,13 +175,4 @@ hr.my-2 {
   i {
     font-size: 1.1rem;
   }
-}
-
-/* Dark mode icon switch */
-html[data-mode='dark'] #mode-toggle i::before {
-  content: "\f186"; /* fa-moon */
-}
-
-html[data-mode='light'] #mode-toggle i::before {
-  content: "\f185"; /* fa-sun */
 }
