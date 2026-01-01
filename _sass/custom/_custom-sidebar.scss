@@ -179,7 +179,7 @@ hr.my-2 {
 
 /* Award 카드 내부 위 여백 줄이기 */
 .award-item {
-  padding-top: 0.5rem !important; /* 기존 1.25rem에서 줄이는 느낌으로 */
+  padding-top: 0 !important; /* 기존 1.25rem에서 줄이는 느낌으로 */
 }
 
 .award-item .award-title {
