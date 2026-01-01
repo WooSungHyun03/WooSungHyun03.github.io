@@ -74,15 +74,12 @@
     <h3 class="mb-4" id="related-label">
       {{- site.data.locales[include.lang].post.relate_posts -}}
     </h3>
-    <nav class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-4">
+    <nav class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-2 mb-4">
       {% for post in relate_posts %}
         <article class="col">
           <a href="{{ post.url | relative_url }}" class="post-preview card h-100">
-            <div class="card-body">
-              <h4 class="pt-0 my-2" style="font-size: 1.1rem;">{{ post.title }}</h4>
-              <div class="text-muted small">
-                <p>{% include post-summary.html %}</p>
-              </div>
+            <div class="card-body p-2 text-center d-flex align-items-center justify-content-center">
+              <h4 class="pt-0 my-1" style="font-size: 0.9rem; line-height: 1.3;">{{ post.title }}</h4>
             </div>
           </a>
         </article>

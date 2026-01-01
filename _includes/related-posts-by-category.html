@@ -5,17 +5,14 @@
   {% if related_posts.size > 0 %}
     <div class="related-posts mt-5">
       <h4 class="mb-3">There are more posts waiting for you</h4>
-      <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-2">
         {% for post in related_posts %}
           <div class="col">
             <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">
+              <div class="card-body p-2 text-center d-flex align-items-center justify-content-center">
+                <h5 class="card-title mb-0" style="font-size: 0.9rem; line-height: 1.3;">
                   <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </h5>
-                <p class="card-text text-muted">
-                  {% include datetime.html date=post.date tooltip=true lang=lang %}
-                </p>
               </div>
             </div>
           </div>

@@ -18,7 +18,7 @@ layout: page
     {% assign first_post = posts_of_category | first %}
 
     {% assign sub_categories = '' | split: '' %}
-    {% if category_name == "Publications" %}
+    {% if category_name == "Publications" or category_name == "Paper Review" %}
     {% else %}
       {% for post in posts_of_category %}
         {% assign second_category = post.categories[1] %}
