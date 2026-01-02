@@ -128,29 +128,41 @@ hr.my-2 {
 }
 
 /* Adjust spacing for home screen cards */
-.card.p-3.mb-4 {
-  padding: 1.25rem !important;  /* 카드 안 여백 넉넉하게 */
-  margin-bottom: 0.75rem !important; /* 카드들 사이 간격은 적당히 */
+.card.p-4.mb-4 {
+  padding: 1.5rem !important;  /* 카드 안 여백 넉넉하게 */
+  margin-bottom: 1.5rem !important; /* 카드들 사이 간격 확보 */
   background-color: var(--card-bg) !important;
   color: var(--text-color) !important;
   border: 1px solid var(--main-border-color) !important;
-  box-shadow: none !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; /* Subtle shadow for depth */
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
 }
 
-.card.p-3.mb-4 h4.mb-1 {
-  margin-bottom: 0.25rem !important; /* 제목은 살짝만 띄우고 */
+.card.p-4.mb-4 h4.mb-2 {
+  margin-bottom: 0.5rem !important;
   margin-top: 0 !important;
   color: var(--heading-color) !important;
+  line-height: 1.4;
 }
 
-.card.p-3.mb-4 p.text-muted {
-  margin-bottom: 0.25rem !important; /* 설명 줄 간격도 조금만 */
+.card.p-4.mb-4 p.text-muted {
+  margin-bottom: 0.5rem !important;
   margin-top: 0 !important;
+  line-height: 1.6;
 }
 
-.card.p-3.mb-4 ul.list-unstyled {
-  margin-bottom: 0.25rem !important;
-  margin-top: 0.25rem !important;
+.card.p-4.mb-4 ul {
+  margin-bottom: 0.75rem !important;
+  margin-top: 0.5rem !important;
+  padding-left: 1.25rem;
+}
+
+.card.p-4.mb-4 ul li {
+  margin-bottom: 0.25rem;
 }
 
 /* Mode Toggle Styling */
@@ -184,4 +196,17 @@ hr.my-2 {
 
 .award-item .award-title {
   margin-top: 0 !important; /* 제목 위 기본 마진 제거 */
+}
+
+/* Ensure all cards on home page use theme variables */
+#award .card, 
+section .card {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border-color: var(--main-border-color) !important;
+}
+
+#award .card h4,
+section .card h4 {
+  color: var(--heading-color) !important;
 }

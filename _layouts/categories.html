@@ -10,7 +10,7 @@ layout: page
 
 {% assign group_index = 0 %}
 
-{% assign custom_category_order = "Notice,Publications,Paper Review,Study,Life" | split: "," %}
+{% assign custom_category_order = "Notice,Publications,Award,Paper Review,Study,Life" | split: "," %}
 
 {% for category_name in custom_category_order %}
   {% assign posts_of_category = site.categories[category_name] %}

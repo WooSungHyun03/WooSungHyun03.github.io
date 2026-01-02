@@ -1,7 +1,6 @@
 ---
 ---
 
-/* prettier-ignore */
 @use 'main
 {%- if jekyll.environment == 'production' -%}
   .bundle
@@ -9,3 +8,45 @@
 ';
 
 /* append your custom style below */
+
+/* Improve text readability and contrast */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Increase contrast for muted text in light/dark modes */
+.text-muted {
+  color: var(--text-muted-color) !important;
+  opacity: 0.9; /* Ensure it's not too faint */
+}
+
+/* Better spacing for headings */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+/* Link styling for accessibility */
+a {
+  text-decoration: none;
+  transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Code block horizontal scroll for mobile */
+.highlight {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}

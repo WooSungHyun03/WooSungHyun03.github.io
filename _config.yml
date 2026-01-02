@@ -42,12 +42,9 @@ social:
 
 # Site Verification Settings
 webmaster_verifications:
-  google: # fill in your Google verification code
-  bing: # fill in your Bing verification code
-  alexa: # fill in your Alexa verification code
-  yandex: # fill in your Yandex verification code
-  baidu: # fill in your Baidu verification code
-  facebook: # fill in your Facebook verification code
+  google: 
+  bing: 
+  naver: # Naver verification
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
@@ -55,23 +52,23 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: 
   goatcounter:
-    id: # fill in your GoatCounter ID
+    id: 
   umami:
-    id: # fill in your Umami ID
-    domain: # fill in your Umami domain
+    id: 
+    domain: 
   matomo:
-    id: # fill in your Matomo ID
-    domain: # fill in your Matomo domain
+    id: 
+    domain: 
   cloudflare:
-    id: # fill in your Cloudflare Web Analytics token
+    id: 
   fathom:
-    id: # fill in your Fathom Site ID
+    id: 
 
 # Page views settings
 pageviews:
-  provider: # now only supports 'goatcounter'
+  provider: 
 
 # Prefer color scheme setting.
 #
@@ -128,10 +125,10 @@ comments:
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
-    enabled: # boolean, keep empty means false
+    enabled: false
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
-    env: # [development | production]
+    env: 
 
 pwa:
   enabled: true # The option for PWA feature (installable)
@@ -141,7 +138,7 @@ pwa:
     # Usually its value is the `baseurl` of another website that
     # shares the same domain name as the current website.
     deny_paths:
-      # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
+      - "https://woosunghyeon03.github.io" # Prevent "New version available" notification loop
 
 paginate: 7
 
