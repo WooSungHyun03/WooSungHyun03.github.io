@@ -46,11 +46,7 @@ layout: page
                   <p class="text-muted mb-2">{{ post.authors }}</p>
                   <p class="text-muted mb-2">{{ post.venue }}</p>
                   {% if post.paper %}
-                    <div class="mt-3">
-                      <a href="{{ post.paper }}" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-file-pdf me-1"></i> Paper
-                      </a>
-                    </div>
+                    <p class="text-muted mb-0"><a href="{{ post.paper }}" target="_blank" rel="noopener noreferrer" class="text-decoration-none mt-2 d-inline-block">[Paper]</a></p>
                   {% endif %}
                 </div>
               </div>
