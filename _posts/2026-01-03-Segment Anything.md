@@ -25,14 +25,14 @@ SAM은 promptable하면서 방대한 데이터셋으로 훈련시켜 generalizat
 <br>
 
 
-**task**<br>
+#### task<br>
 프롬프트가 모호하여 여러 객체를 지칭할 수 있는 경우에도  출력은 해당 객체 중 적어도 하나에 대한 합리적인 mask여야 함을 의미합니다.<br>
 (예를 들어 셔츠 라는 프롬프트를 입력했다면 셔츠 자체를 나타낼 수도 있고 그것을 입고 있는 사람을 나타낼 수도 있음)<br>
 
 ![Figure 3](./assets/img/Paper-Review/Segment-Anything/Figure3.png)
 <br>
 
-**model**<br>
+#### model<br>
 모호한 프롬프트에도 유연하게 대처하며 mask를 실시간으로 생성하기 위해서 다음과 같은 구조를 제시합니다.<br>
 image encoder가 image embedding을 계산<br>
 prompt encoder가 prompt embedding을 계산<br>
@@ -66,7 +66,7 @@ SAM은 focal loss와 dice loss를 선형 조합으로 mask 예측을 지도합�
 
 
 
-**data**<br>
+#### data<br>
 generalization한 model을 구축하기 위한 방대한 데이터셋은 충분하지 않습니다.<br>
 데이터를 수집하고 model을 학습시키는 과정을 반복합니다. 그리고 3가지 단계로 이루어진 data engine을 제시합니다.<br>
 첫번째 assisted-manual은 SAM이 annotators의 annotating mask를 돕습니다.<br>
