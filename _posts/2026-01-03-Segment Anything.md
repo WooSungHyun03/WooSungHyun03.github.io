@@ -139,7 +139,7 @@ SAM이 Zero-Shot image에서는 1. edge를 탐지하고 2. 모든 것을 분할�
 ![Figure 9](./assets/img/Paper-Review/Segment-Anything/Figure9.png)
 <br>
 
-먼저 23개의 데이터셋에 대한 mIoU를 모두 평가합니다. 
+먼저 23개의 데이터셋에 대한 mIoU를 모두 평가합니다.<br>
 그리고 SAM과 RITM모델을 비교하는데 (a)보시면 SAM이 16개의 데이터셋에서 더 좋은 성능을 내는 것을 볼 수 있습니다.<br>
 여기서 가장 신뢰도가 높은 mask를 선택하는 대신 SAM의 3개의 mask중 가장  관련성 높은 mask를 선택하는 *oracle* 결과는 모든 데이터셋에서 더 높은 결과를 냈습니다.(c)<br>
 인간 연구인 (b)에서도 평균적으로 SAM이 높은 점수를 내어 더 높은 성능을 입증했습니다.<br>
@@ -154,7 +154,7 @@ SAM은 어떤 edge를 억제해야하는지 학습하는 최첨단 model보다 �
 <br>
 
 #### 7.3. Zero-Shot Object Proposals
-다음으로 SAM의 객체 제안에 대해 평가합니다.br>
+다음으로 SAM의 객체 제안에 대해 평가합니다.<br>
 우리는 객체 생성을 제안시키기 위해 자동 mask 생성 파이프라인을 약간 수정하여 실행하고 mask를 제안으로 출력합니다.<br>
 결과는 다른 객체 제안 모델보다 좋은 성능을 냅니다 결과는 아래와 같습니다.<br>
 ![Table 4](./assets/img/Paper-Review/Segment-Anything/Table4.png)
