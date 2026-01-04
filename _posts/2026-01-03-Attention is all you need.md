@@ -41,7 +41,7 @@ encoder는 두 개의 하위 계층으로 나눠집니다. 하나는 Multi-Head 
 
 트랜스포머는 두 하위 계층에서 ResNet에서 선보인 Residual Connection을 채택함으로써 학습과정에서 잔차만 학습하도록 하여 효율을 높였습니다.
 
-Residual Connection을 용이하게 하기 위해서 하위 계층과 임베딩 계층의 output 차원을 모두 d<sub>model</sub> = 512 로 통일하였습니다.
+Residual Connection을 용이하게 하기 위해서 하위 계층과 embedding 계층의 output 차원을 모두 d<sub>model</sub> = 512 로 통일하였습니다.
 
 <br>
 
@@ -144,19 +144,19 @@ $$
 
 #### 3.4 Embeddings and Softmax
 
-트랜스포머는 input token과 output token 모두 d<sub>model</sub>=512 차원의 벡터로 변화하기 위해 학습된 임베딩을 사용합니다.
+트랜스포머는 input token과 output token 모두 d<sub>model</sub>=512 차원의 벡터로 변화하기 위해 학습된 embedding을 사용합니다.
 
 decoder의 최종 출력은 선형 변환을 거친 후 softmax를 통하여 input token에 대한 예측 확률이 나오게 됩니다.
 
 트랜스포머는 encoder input embedding layer, decoder input embedding layer,softmax이전에 선형변환에서 동일한 가중치 행렬을 공유합니다. 이러한 가중치 공유는 모델의 파라미터 수를 줄일 수 있습니다
 
-embedding layer에 $\sqrt{d_{model}}dmodel$을 곱해줍니다.
+embedding layer에 $\sqrt{d_{model}}$을 곱해줍니다.
 
 
 
 #### 3.5 Positional Encoding
 
-각 token에 관계성과 위치 정보를 삽입하기 위해 임베딩과 동일한 차원인 d<sub>model</sub>=512 Positional Encoding을 더해줍니다.
+각 token에 관계성과 위치 정보를 삽입하기 위해 embedding과 동일한 차원인 d<sub>model</sub>=512 Positional Encoding을 더해줍니다.
 
 $$
 PE_{(pos, 2i)} = \sin(pos/10000^{2i/d_{\text{model}}})
