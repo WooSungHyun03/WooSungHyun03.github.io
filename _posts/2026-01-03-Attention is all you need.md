@@ -157,7 +157,7 @@ $$
 
 이 함수를 채택한 이유는 PE가 고정된 offset에 선형 함수로 표현될 수 있기 때문입니다.
 
-![Positional Encoding](./assets/img/Paper-Review/Attention Is All You Need/Positional Encoding.webp)
+![Positional Encoding](./assets/img/Paper-Review/Attention Is All You Need/positional encoding.webp)
 
 학습가능한 positional embedding으로 대체 할 수 있으며 실험 상 둘다 비슷한 성능을 냈습니다.
 
