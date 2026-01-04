@@ -133,6 +133,8 @@ assets:
 pwa:
   enabled: false # The option for PWA feature (installable)
 
+favicon:
+  path: /assets/img/favicons
 
 paginate: 7
 
