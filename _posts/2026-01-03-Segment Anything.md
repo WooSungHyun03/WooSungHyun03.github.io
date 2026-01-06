@@ -21,7 +21,7 @@ SAM은 promptable하면서 방대한 데이터셋으로 훈련시켜 generalizat
 3. What **data** can power this task and model?
 
 
-![Figure 1](./assets/img/Paper-Review/Segment-Anything/Figure1.webp)
+![Figure 1](/assets/img/Paper-Review/Segment-Anything/Figure1.webp)
 <br>
 
 
@@ -29,7 +29,7 @@ SAM은 promptable하면서 방대한 데이터셋으로 훈련시켜 generalizat
 프롬프트가 모호하여 여러 객체를 지칭할 수 있는 경우에도  출력은 해당 객체 중 적어도 하나에 대한 합리적인 mask여야 함을 의미합니다.<br>
 (예를 들어 셔츠 라는 프롬프트를 입력했다면 셔츠 자체를 나타낼 수도 있고 그것을 입고 있는 사람을 나타낼 수도 있음)<br>
 
-![Figure 3](./assets/img/Paper-Review/Segment-Anything/Figure3.webp)
+![Figure 3](/assets/img/Paper-Review/Segment-Anything/Figure3.webp)
 <br>
 
 #### model<br>
@@ -40,7 +40,7 @@ prompt encoder가 prompt embedding을 계산<br>
 SAM은 이렇게 encoder와 decoder를 분리함으로써 동일한 image embedding은 다른 prompts와 함께 재사용되어 비용 부담이 분산됩니다<br>
 
 
-![Figure 4](./assets/img/Paper-Review/Segment-Anything/Figure4.webp)
+![Figure 4](/assets/img/Paper-Review/Segment-Anything/Figure4.webp)
 <br>
 
 
@@ -89,7 +89,7 @@ SAM이 중요한 객체를 인식하기 위해 먼저 일반적인 객체 카테
 추가적으로 SAM은 작은 객체도 잘 분할하기 위해image 를 crop하여 확대하여 추론하였습니다.<br>
 이렇게 11M 이상의 image와 1B 이상의 mask인 SA-1B를 구축하였습니다.<br>
 
-![Figure 2](./assets/img/Paper-Review/Segment-Anything/Figure2.webp)
+![Figure 2](/assets/img/Paper-Review/Segment-Anything/Figure2.webp)
 <br>
 
 
@@ -101,11 +101,11 @@ mask 중 99.1%가 자동으로 생성되었습니다. 그래서 mask의 품질�
 
  다른 데이터셋과 비교했을때 보통 사진사는 객체를 가운데 두고 찍으려는 편향이 있습니다. 하지만 SA-1B는 다른 데이터셋에 비해 사진 전체에 골고루 분포되어 있음을 나타냅니다.<br>
  
-![Figure 5](./assets/img/Paper-Review/Segment-Anything/Figure5.webp)
+![Figure 5](/assets/img/Paper-Review/Segment-Anything/Figure5.webp)
 <br>
 
 SA-1B는 다른 데이터셋에 비해 image도 많고 mask도 많음을 그래프로 보여줍니다.<br>
-![Figure 6](./assets/img/Paper-Review/Segment-Anything/Figure6.webp)
+![Figure 6](/assets/img/Paper-Review/Segment-Anything/Figure6.webp)
 <br>
 
 
@@ -113,15 +113,15 @@ SA-1B는 다른 데이터셋에 비해 image도 많고 mask도 많음을 그래�
 ---
 대부분의 데이터셋은 저소득층 국가로부터의 image 비율이 상당히 낮습니다.<br>
 하지만 SA-1B는 일관적으로 많다는 것을 보여주고 있습니다.<br>
-![Figure 7](./assets/img/Paper-Review/Segment-Anything/Figure7.webp)
+![Figure 7](/assets/img/Paper-Review/Segment-Anything/Figure7.webp)
 <br>
 
 아래는 다른 데이터셋에 비하여  저소득층 국가의 image가 많다는 것을 보여주는 표 입니다.<br>
-![Table 1](./assets/img/Paper-Review/Segment-Anything/Table1.webp)
+![Table 1](/assets/img/Paper-Review/Segment-Anything/Table1.webp)
 <br>
 
 아래는 SA-1B가 두 성별과 여러 나이대의 사람들과 여러 인종을 골고루 포함해서 SAM의 성능이 일관됨을 보여줍니다.<br>
-![Table 2](./assets/img/Paper-Review/Segment-Anything/Table2.webp)
+![Table 2](/assets/img/Paper-Review/Segment-Anything/Table2.webp)
 <br>
 
 ### 7. Zero-Shot Transfer Experiments
@@ -132,11 +132,11 @@ SAM이 Zero-Shot image에서는 1. edge를 탐지하고 2. 모든 것을 분할�
 따라서 저희는 annotators가 mIoU를 1(무의미)부터 10(픽셀 단위 완벽)까지 평가하는 인간 연구로 보완합니다.<br>
 
 한번도 훈련되지 않은 새로운 image 데이터셋이며 23개의 데이터셋 모음을 사용합니다.<br>
-![Figure 8](./assets/img/Paper-Review/Segment-Anything/Figure8.webp)
+![Figure 8](/assets/img/Paper-Review/Segment-Anything/Figure8.webp)
 <br>
 
 인간 실험은 인간이 하기때문에 한계가 있어서 아래 (b)에 명시되어있는 하위 항목만 실험합니다.<br>
-![Figure 9](./assets/img/Paper-Review/Segment-Anything/Figure9.webp)
+![Figure 9](/assets/img/Paper-Review/Segment-Anything/Figure9.webp)
 <br>
 
 먼저 23개의 데이터셋에 대한 mIoU를 모두 평가합니다.<br>
@@ -146,25 +146,25 @@ SAM이 Zero-Shot image에서는 1. edge를 탐지하고 2. 모든 것을 분할�
 
 #### 7.2. Zero-Shot Edge Detection
 SAM은 BSDS500을 사용하여 엣지 탐지에 대해 평가합니다. SAM은 16x16 regular grid of foreground points로  프롬프트를 제공하여 점당 3개씩 총 768개의 mask를 생성합니다. 중복된 mask는 NMS에 의해 제거되고 임계값 미적용 mask 확률 맵에 대해 Sobel 필터링과 후처리를 사용하여 edge를 계산합니다. SAM은 edge detection을 위해 훈련되지 않았음에도 합리적인 edge를 생성한다는 것을 관찰했습니다. 결과는 아래와 같습니다.<br>
-![Figure 10](./assets/img/Paper-Review/Segment-Anything/Figure10.webp)
+![Figure 10](/assets/img/Paper-Review/Segment-Anything/Figure10.webp)
 <br>
 
 SAM은 어떤 edge를 억제해야하는지 학습하는 최첨단 model보다 뒤처집니다. 그에도 불구하고 선구적인 딥러닝 model과 비교했을때 좋은 성능을 보입니다. 결과는 아래와 같습니다.<br>
-![Table 3](./assets/img/Paper-Review/Segment-Anything/Table3.webp)
+![Table 3](/assets/img/Paper-Review/Segment-Anything/Table3.webp)
 <br>
 
 #### 7.3. Zero-Shot Object Proposals
 다음으로 SAM의 객체 제안에 대해 평가합니다.<br>
 우리는 객체 생성을 제안시키기 위해 자동 mask 생성 파이프라인을 약간 수정하여 실행하고 mask를 제안으로 출력합니다.<br>
 결과는 다른 객체 제안 모델보다 좋은 성능을 냅니다 결과는 아래와 같습니다.<br>
-![Table 4](./assets/img/Paper-Review/Segment-Anything/Table4.webp)
+![Table 4](/assets/img/Paper-Review/Segment-Anything/Table4.webp)
 <br>
 
 #### 7.4. Zero-Shot Instance Segmentation
 우리는 SAM을 instance 분할기의 분할 모듈로 사용합니다. <br>
 객체 검출 모델(ViTDet)을 실행하고 해당 출력 상자로 SAM에게 프롬프트를 제공합니다.<br>
 SAM이 표에서는 ViTDet보다 뒤쳐지지만 인간 연구에서는 ViTDet을 능가한다는 것을 관찰합니다. 결과는 아래와 같습니다.<br>
-![Table 5](./assets/img/Paper-Review/Segment-Anything/Table5.webp)
+![Table 5](/assets/img/Paper-Review/Segment-Anything/Table5.webp)
 <br>
 
 #### 7.5. Zero-Shot Text-to-Mask
@@ -172,14 +172,14 @@ SAM의 free form text로부터 객체를 segmentation에 대해 평가합니다.
 면적이 100²보다 큰 수동으로 수집된 각 mask에 대해 CLIP Image embedding을 추출합니다.<br>
 훈련 중에 추출된 CLIP image embedding을 첫번째 프롬프트로 합니다. 여기서 CLIP의 image embedding이 text embedding과 정렬되도록 훈련되었기 때문에, image embedding으로 훈련하고 추론 시에는 text embedding을 사용 할 수 있습니다. 즉, 추론 시에는 text를 CLIP의 text encoder를 통해 실행한 다음 결과 text embedding을 SAM에 프롬프트로 제공합니다.<br>
 결과는 아래와 같이 text 프롬프트 만으로 올바른 객체를 선택하지 못할때 추가적인 점이 예측을 수정하는 경우가 많습니다.<br>
-![Figure 12](./assets/img/Paper-Review/Segment-Anything/Figure12.webp)
+![Figure 12](/assets/img/Paper-Review/Segment-Anything/Figure12.webp)
 <br>
 
 #### 7.6. Ablations
 단일 point 프롬프트를 사용하여 23개의 데이터셋에서 여러 ablations를 수행합니다.<br>
 아래는 data engine단계에서 누적 데이터로 훈련된 SAM의 성능을 보여줍니다.<br>
 
-![Figure 13](./assets/img/Paper-Review/Segment-Anything/Figure13.webp)
+![Figure 13](/assets/img/Paper-Review/Segment-Anything/Figure13.webp)
 <br>
 
  각 단계가 mIoU를 증가시키는 것을 관찰합니다.<br>

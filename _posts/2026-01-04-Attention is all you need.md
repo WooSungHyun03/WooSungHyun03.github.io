@@ -27,7 +27,7 @@ Author: [Ashish Vaswani](https://arxiv.org/search/cs?searchtype=author&query=Vas
 
 ---
 
-![Figure 1](./assets/img/Paper-Review/Attention Is All You Need/Figure1.webp)
+![Figure 1](/assets/img/Paper-Review/Attention Is All You Need/Figure1.webp)
 
 위 사진은 트랜스포머의 구조를 나타낸 그림입니다. 그림에서는 encoder와 decoder가 하나씩 되어있지만 실제로는 encoder와 decoder가 N개씩 이루어져있습니다.
 
@@ -69,7 +69,7 @@ Attention은 query와 (key,value)쌍 으로 구분합니다. 여기서 query,key
 
  
 
-![Figure 2](./assets/img/Paper-Review/Attention Is All You Need/Figure2.webp)
+![Figure 2](/assets/img/Paper-Review/Attention Is All You Need/Figure2.webp)
 
 
 
@@ -91,7 +91,7 @@ $$
 
 여기서  굳이  $\sqrt{d_{k}}$를 나누는 이유는 d<sub>k</sub>값이 커지면 $QK^{\top}$가 너무 커지거나 작아져서 softmax의 기울기가 0에 가까운 vanishing gradient 문제가 발생하기 때문에 값을 낮추기 위해서 나눠줍니다. 아래는 softmax 함수입니다.
 
-![softmax](./assets/img/Paper-Review/Attention Is All You Need/softmax.webp)
+![softmax](/assets/img/Paper-Review/Attention Is All You Need/softmax.webp)
 
 
 
@@ -176,7 +176,7 @@ $$
 
 이 함수를 채택한 이유는 PE가 고정된 offset에 선형 함수로 표현될 수 있기 때문입니다.
 
-![Positional Encoding](./assets/img/Paper-Review/Attention Is All You Need/positional encoding.webp)
+![Positional Encoding](/assets/img/Paper-Review/Attention Is All You Need/positional encoding.webp)
 
 학습가능한 positional embedding으로 대체 할 수 있으며 실험 상 둘다 비슷한 성능을 냈습니다.
 
@@ -186,7 +186,7 @@ $$
 
 Self-Attention을 사용한 이유는 병렬화가 가능하여 computational complexity가 낮으며 long-range dependencies 문제를 해결 할 수 있습니다.
 
-![Table1](./assets/img/Paper-Review/Attention Is All You Need/Table1.webp)
+![Table1](/assets/img/Paper-Review/Attention Is All You Need/Table1.webp)
 
 ### 5 Training
 
@@ -239,15 +239,15 @@ Label Smoothing: 훈련 중 $\epsilon_{\mathrm{ls}} = 0.1$ 을 사용했습니�
 
 해당 부분은 결과를 나타냅니다.  
 
-![Table2](./assets/img/Paper-Review/Attention Is All You Need/Table2.webp)
+![Table2](/assets/img/Paper-Review/Attention Is All You Need/Table2.webp)
 
-![Table3](./assets/img/Paper-Review/Attention Is All You Need/Table3.webp)
+![Table3](/assets/img/Paper-Review/Attention Is All You Need/Table3.webp)
 
 Table 3 (A)에서 볼 수 있듯이 Single Head Attention은 성능 하락으로 이어집니다.
 
 Table 3 (B)에서 볼 수 있듯이 d<sub>k</sub>를 줄이는 것은 성능 하락으로 이어집니다.
 
-![Table4](./assets/img/Paper-Review/Attention Is All You Need/Table4.webp)
+![Table4](/assets/img/Paper-Review/Attention Is All You Need/Table4.webp)
 
 
 
@@ -267,9 +267,9 @@ Table 3 (B)에서 볼 수 있듯이 d<sub>k</sub>를 줄이는 것은 성능 하
 
 아래는 Attention을 시각화한 것 입니다. 
 
-![Figure 3](./assets/img/Paper-Review/Attention Is All You Need/Figure3.webp)
+![Figure 3](/assets/img/Paper-Review/Attention Is All You Need/Figure3.webp)
 
-![Figure 4](./assets/img/Paper-Review/Attention Is All You Need/Figure4.webp)
+![Figure 4](/assets/img/Paper-Review/Attention Is All You Need/Figure4.webp)
 
-![Figure 5](./assets/img/Paper-Review/Attention Is All You Need/Figure5.webp)
+![Figure 5](/assets/img/Paper-Review/Attention Is All You Need/Figure5.webp)
 

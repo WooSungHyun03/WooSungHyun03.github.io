@@ -8,7 +8,7 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-2">
         {% for post in related_posts %}
           <div class="col">
-            <div class="card h-100">
+            <div class="card h-100" style="background-color: var(--card-bg) !important;">
               <div class="card-body p-2 text-center d-flex align-items-center justify-content-center">
                 <h5 class="card-title mb-0" style="font-size: 0.9rem; line-height: 1.3;">
                   <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
