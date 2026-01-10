@@ -3,7 +3,6 @@ title: "[Notice] Welcome to my blog"
 date: 2025-12-24 10:00:00 +0900
 categories: [Notice]
 tags: [notice]
-description: "Welcome to my research blog."
 ---
 
 안녕하세요👋  
