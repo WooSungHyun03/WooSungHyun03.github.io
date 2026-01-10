@@ -1,9 +1,16 @@
 ---
-title: "[Sample] Welcome to my blog"
+title: "[Notice] Welcome to my blog"
 date: 2025-12-24 10:00:00 +0900
 categories: [Notice]
-tags: [welcome, notice]
+tags: [notice]
 description: "Welcome to my research blog."
 ---
 
-Welcome! This blog is dedicated to sharing my research journey in 3D Vision and Computer Science.
+안녕하세요👋  
+
+3D Vision 분야를 공부하고 있는 대학생입니다.  
+수업과 논문, 개인 연구를 통해 배운 내용들을 스스로 정리하고 기록하기 위해 이 블로그를 시작하게 되었습니다.  
+
+아직 많이 부족하지만, 개념을 정확히 이해하고 차분하게 정리하는 것을 목표로 꾸준히 포스트를 작성할 예정입니다.  
+
+잘 부탁드립니다. 감사합니다 🙂
