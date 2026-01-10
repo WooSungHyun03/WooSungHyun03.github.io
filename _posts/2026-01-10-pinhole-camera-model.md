@@ -43,6 +43,7 @@ camera center와 image plane 사이의 거리를 focal length(f)라 칭합니다
 해당 수식은 Radial distortion을 모델링한 식입니다. k는 얼마나 왜곡되었는지 정하는 계수이며 r은 중심으로 부터의 거리입니다.
 
  ![Figure 9](/assets/img/Study/pinhole-camera-model/Figure9.webp)
+ 여기서 중요한 점은 단위가 pixel 입니다. 그래서 이미지 pixel의 길이가 어떻게 되느냐에 따라서 focal length 또한 달리집니다. 
 
  ![Figure 10](/assets/img/Study/pinhole-camera-model/Figure10.webp)
 
