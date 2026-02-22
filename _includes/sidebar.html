@@ -59,19 +59,23 @@
         </a>
       </li>
 
-      <li class="nav-item{% if page.url contains '/categories/study/' %}{{ " active" }}{% endif %}">
-        <a href="{{ '/categories/study/' | relative_url }}" class="nav-link">
-          <i class="fa-fw fas fa-solid fa-book-open"></i>
-          <span>STUDY</span>
-        </a>
-      </li>
+      {% if site.categories['Study'] %}
+        <li class="nav-item{% if page.url contains '/categories/study/' %}{{ " active" }}{% endif %}">
+          <a href="{{ '/categories/study/' | relative_url }}" class="nav-link">
+            <i class="fa-fw fas fa-solid fa-book-open"></i>
+            <span>STUDY</span>
+          </a>
+        </li>
+      {% endif %}
 
-      <li class="nav-item{% if page.url contains '/categories/life/' %}{{ " active" }}{% endif %}">
-        <a href="{{ '/categories/life/' | relative_url }}" class="nav-link">
-          <i class="fa-fw fas fa-smile"></i>
-          <span>LIFE</span>
-        </a>
-      </li>
+      {% if site.categories['Life'] %}
+        <li class="nav-item{% if page.url contains '/categories/life/' %}{{ " active" }}{% endif %}">
+          <a href="{{ '/categories/life/' | relative_url }}" class="nav-link">
+            <i class="fa-fw fas fa-smile"></i>
+            <span>LIFE</span>
+          </a>
+        </li>
+      {% endif %}
     </ul>
   </nav>
 
