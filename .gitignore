@@ -1,0 +1,7 @@
+# LaTeX build artifacts for the CV source.
+jakes-format/*.aux
+jakes-format/*.fdb_latexmk
+jakes-format/*.fls
+jakes-format/*.log
+jakes-format/*.out
+jakes-format/*.synctex.gz
