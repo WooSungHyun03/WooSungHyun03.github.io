@@ -199,7 +199,7 @@ strong {
 
 .publication {
   display: grid;
-  grid-template-columns: minmax(150px, 23%) minmax(0, 77%);
+  grid-template-columns: minmax(168px, calc(23% + 18px)) minmax(0, 77%);
   gap: 18px;
   align-items: center;
   padding: 10px 0;
@@ -208,6 +208,7 @@ strong {
 .publication-thumbnail {
   display: block;
   min-width: 0;
+  padding-left: 18px;
 }
 
 .publication-thumbnail img {
@@ -307,6 +308,8 @@ strong {
 
   .publication-thumbnail {
     width: min(100%, 260px);
+    margin-inline: auto;
+    padding-left: 0;
   }
 
   .publication-thumbnail img {
