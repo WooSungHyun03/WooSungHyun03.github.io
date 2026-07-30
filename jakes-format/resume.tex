@@ -12,15 +12,34 @@
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{fontawesome5}
+\usepackage{pifont}
 \input{glyphtounicode}
 
+\newcommand{\githubstars}[1]{[{\faGithubSquare}\,\ding{72}\,\textbf{#1}]}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
 \pagestyle{fancy}
-\fancyhf{}
+\fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -31,160 +50,165 @@
 \addtolength{\textwidth}{1.1in}
 \addtolength{\topmargin}{-.65in}
 \addtolength{\textheight}{1.3in}
-\setlength{\footskip}{4pt}
 
 \urlstyle{same}
-\linespread{1.05}
+
+\linespread{1.1}
+
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Section formatting
+% Sections formatting
 \titleformat{\section}{
-  \vspace{-7pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
 
-% Ensure that the generated PDF is machine-readable and ATS parsable.
+% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
-\hypersetup{
-  pdftitle={Sunghyun Woo - Curriculum Vitae},
-  pdfauthor={Sunghyun Woo},
-  pdfsubject={Academic curriculum vitae}
-}
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{{#1 \vspace{-3pt}}}
+  \item\small{
+    {#1 \vspace{-6pt}}
+  }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{-3pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{\small #3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-8pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-  \item
+    \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small #1 & #2 \\
+      \small#1 & #2 \\
     \end{tabular*}\vspace{-4pt}
 }
 
-\newcommand{\resumePublication}[4]{
-  \item
-  \begin{tabularx}{0.97\textwidth}{@{}Xr@{}}
-    \small \href{#1}{\textbf{#2}} & \small #3
-  \end{tabularx}
-  \vspace{-3pt}
-  {\small
-    \textbf{Sunghyun Woo}, Jeongil Seo* \\[-1pt]
-    \textit{#4} \;|\; \href{#1}{\underline{paper}}\par
-  }
-  \vspace{-3pt}
-}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{
-  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=1pt, topsep=3pt]
-}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{
-  \begin{itemize}[leftmargin=0.25in, itemsep=1pt, topsep=3pt]
-}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-0pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\LARGE Sunghyun Woo} \\ \vspace{2pt}
+    \textbf{\LARGE \scshape Sunghyun Woo} \\ \vspace{1pt}
     \small
-    \href{mailto:wshyun314@gmail.com}{\underline{wshyun314@gmail.com}}
-    $|$
-    \href{https://scholar.google.com/citations?user=iWLNqaEAAAAJ\&hl=ko}{\underline{Google Scholar}}
-    $|$
-    \href{https://www.linkedin.com/in/sunghyunwoo}{\underline{LinkedIn}}
-    $|$
+    \href{mailto:wshyun314@gmail.com}{\underline{wshyun314@gmail.com}} $|$
+    \href{https://scholar.google.com/citations?user=iWLNqaEAAAAJ\&hl=ko}{\underline{Google Scholar}} $|$
+    \href{https://www.linkedin.com/in/sunghyunwoo}{\underline{LinkedIn}} $|$
     \href{https://github.com/WooSungHyun03}{\underline{GitHub}}
 \end{center}
 
-%-----------EDUCATION-----------
-\section{Education}
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {Dong-A University}{Busan, South Korea}
-    {B.S. in Computer Engineering; GPA: 4.13 / 4.5}
-    {Mar. 2022 -- Present}
-\resumeSubHeadingListEnd
 
-%-----------RESEARCH EXPERIENCE-----------
-\section{Research Experience}
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {Research Intern}{Apr. 2024 -- Present}
-    {Media for Machine Lab (M4ML), Dong-A University \;|\; Advisor: Prof. Jeongil Seo}
-    {Busan, South Korea}
-  \resumeItemListStart
-    \resumeItem{Conduct research on neural scene representations and 3D reconstruction, with a focus on Neural Radiance Fields and 3D Gaussian Splatting.}
-  \resumeItemListEnd
-\resumeSubHeadingListEnd
-
-%-----------PUBLICATIONS-----------
-\section{Publications}
-\resumeSubHeadingListStart
-  \resumePublication
-    {https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12902766}
-    {Densification Rescheduling for 3D Gaussian Splatting Performance Improvement}
-    {2026}
-    {Proceedings of the Korean Institute of Broadcast and Media Engineers Conference, pp. 1047--1050}
-
-  \resumePublication
-    {https://www.ksbe-jbe.org/_PR/view/?aidx=47274\&bidx=4269}
-    {Comparative Study on the Performance of NeRF and 3DGS Based Models}
-    {2025}
-    {Journal of Broadcast Engineering, vol. 30, no. 6, pp. 927--941}
-
-  \resumePublication
-    {https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12492800}
-    {Quality-Enhanced 3D Gaussian Splatting via Tile Hard Mining and Edge Weighted Densify}
-    {2025}
-    {Proceedings of the Korean Institute of Broadcast and Media Engineers Conference, pp. 24--27}
-
-  \resumePublication
-    {https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12288369}
-    {Neural Radiance Fields and 3D Gaussian Splatting: Performance Comparison Analysis by Iteration}
-    {2025}
-    {Proceedings of the Korean Institute of Broadcast and Media Engineers Conference, pp. 1530--1533}
-\resumeSubHeadingListEnd
-\vspace{-3pt}
-{\footnotesize * Corresponding author.}
-
-%-----------HONORS & AWARDS-----------
-\section{Honors \& Awards}
-\begin{itemize}[leftmargin=0.15in, label={}, topsep=3pt]
-  \small{\item{
-    \textbf{2025} -- Excellence Award, Capstone Design Competition (Poster Presentation), Korean Institute of Broadcast and Media Engineers Summer Conference \\
-    \textbf{First Prize} -- SZU--DAU International Hackathon \\
-    \textbf{Excellence Award} -- One Punch Ralph-thon in Busan
-  }}
-\end{itemize}
+% Skills and Experience before Education is recommended for industry applications.
+% Reference: https://www.sweresume.app/articles/faang-resume-guide/
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, label={}, topsep=3pt]
-  \small{\item{
-    \textbf{Programming}{: C++, Python, CUDA} \\
-    \textbf{Frameworks \& Tools}{: PyTorch, OpenCV, Git, Docker, Conda} \\
-    \textbf{Research Interests}{: Deep Learning, Computer Vision, 3D Vision, 3D Reconstruction}
-  }}
-\end{itemize}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming}{: C++, Python, CUDA} \\
+     \textbf{Frameworks \& Tools}{: PyTorch, OpenCV, Git, Docker, Conda} \\
+     \textbf{Research Areas}{: 3D Reconstruction, Novel View Synthesis, 3D Vision, Computer Vision, Deep Learning}
+    }}
+ \end{itemize}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Research Intern}{Apr. 2024 -- Present}
+      {Media for Machine Lab (M4ML), Dong-A University (Advisor: Prof. Jeongil Seo)}
+      {Busan, South Korea}
+      \resumeItemListStart
+        \resumeItem{Conduct research on neural scene representations and 3D reconstruction, with a focus on Neural Radiance Fields and 3D Gaussian Splatting.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\href{https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12902766}{\textbf{Densification Rescheduling for 3D Gaussian Splatting Performance Improvement}}}{2026}
+      \resumeItemListStart
+        \resumeItem{\textbf{Sunghyun Woo}, Jeongil Seo* \\
+        \textit{Proceedings of the Korean Institute of Broadcast and Media Engineers Conference, pp. 1047--1050} \;|\; \href{https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12902766}{\underline{paper}}}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://www.ksbe-jbe.org/_PR/view/?aidx=47274\&bidx=4269}{\textbf{Comparative Study on the Performance of NeRF and 3DGS Based Models}}}{2025}
+      \resumeItemListStart
+        \resumeItem{\textbf{Sunghyun Woo}, Jeongil Seo* \\
+        \textit{Journal of Broadcast Engineering, vol. 30, no. 6, pp. 927--941} \;|\; \href{https://www.ksbe-jbe.org/_PR/view/?aidx=47274\&bidx=4269}{\underline{paper}}}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12492800}{\textbf{Quality-Enhanced 3D Gaussian Splatting via Tile Hard Mining and Edge Weighted Densify}}}{2025}
+      \resumeItemListStart
+        \resumeItem{\textbf{Sunghyun Woo}, Jeongil Seo* \\
+        \textit{Proceedings of the Korean Institute of Broadcast and Media Engineers Conference, pp. 24--27} \;|\; \href{https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12492800}{\underline{paper}}}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12288369}{\textbf{Neural Radiance Fields and 3D Gaussian Splatting: Performance Comparison Analysis by Iteration}}}{2025}
+      \resumeItemListStart
+        \resumeItem{\textbf{Sunghyun Woo}, Jeongil Seo* \\
+        \textit{Proceedings of the Korean Institute of Broadcast and Media Engineers Conference, pp. 1530--1533} \;|\; \href{https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12288369}{\underline{paper}}}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+  {\footnotesize * Corresponding author.}
+
+
+%-----------HONORS & AWARDS-----------
+\section{Honors \& Awards}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{2026} -- Excellence Award, One Punch Ralph-thon in Busan \\
+     \textbf{2025} -- Excellence Award, Capstone Design Competition (Poster Presentation), Korean Institute of Broadcast and Media Engineers Summer Conference \\
+     \textbf{2025} -- First Prize, SZU--DAU International Hackathon
+    }}
+ \end{itemize}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Dong-A University}{Busan, Korea}
+      {B.S. in Department of Computer Engineering; GPA: 4.13 / 4.5}{Mar. 2022 -- Present}
+
+  \resumeSubHeadingListEnd
+
 
 %-------------------------------------------
 \end{document}
